@@ -1,25 +1,94 @@
-# 📊 Análise de Churn — TelecomX
+# 📊 TelecomX - Churn Prediction Project
 
-## 📌 Objetivo
-Este projeto tem como objetivo analisar o comportamento de clientes de uma empresa de telecomunicações, buscando identificar padrões relacionados ao cancelamento de serviços (Churn).
+## 🎯 Objetivo
+Desenvolver um modelo de Machine Learning capaz de prever a evasão (Churn) de clientes da TelecomX e identificar os principais fatores que influenciam o cancelamento.
 
-## 📊 Dados
-O conjunto de dados possui 7.267 registros e 21 variáveis, contendo informações demográficas, serviços contratados e dados de cobrança dos clientes.
+---
 
-## 🔍 Análises Realizadas
-- Distribuição geral de churn
-- Churn por tipo de contrato
-- Churn em função do tempo de permanência (tenure)
-- Visualizações gráficas para apoio à análise
+## 📁 Dataset
+Base de dados contendo informações demográficas, contratuais, serviços contratados e valores de cobrança.
 
-## 📈 Principais Resultados
-- Clientes com contratos mensais apresentam maior taxa de cancelamento.
-- O churn é mais frequente nos primeiros meses de contrato.
-- Contratos de maior duração estão associados a maior retenção de clientes.
+Target:
+- Churn (Yes/No)
 
-## 🛠️ Tecnologias Utilizadas
+---
+
+## ⚙️ Etapas do Projeto
+
+### 🔹 1. Data Preparation
+- Limpeza de dados
+- Conversão de variáveis
+- Encoding (One-Hot Encoding)
+- Normalização (StandardScaler)
+- Split treino/teste com estratificação
+
+### 🔹 2. Modelagem
+Modelos utilizados:
+- Logistic Regression
+- Random Forest
+
+Também foi aplicado:
+- SMOTE para balanceamento da classe minoritária
+
+---
+
+## 📊 Resultados
+
+Principais métricas avaliadas:
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+- ROC-AUC
+
+O modelo com melhor desempenho geral foi:
+
+👉 Random Forest + SMOTE
+
+---
+
+## 🔍 Principais Fatores que Influenciam o Churn
+
+1. Contrato mensal (Month-to-month)
+2. Baixo tempo de permanência (tenure)
+3. Alta mensalidade
+4. Pagamento via Electronic Check
+5. Ausência de TechSupport
+6. Ausência de OnlineSecurity
+
+---
+
+## 🚀 Conclusão Estratégica
+
+A evasão está fortemente associada a clientes novos, com contratos mensais e maior valor de cobrança.
+
+Recomendações:
+
+- Incentivar migração para contratos anuais
+- Criar programa de retenção nos primeiros meses
+- Oferecer pacotes com serviços agregados
+- Incentivar pagamento automático
+
+---
+
+## 🧠 Tecnologias Utilizadas
+
 - Python
 - Pandas
+- Scikit-learn
+- Imbalanced-learn
 - Matplotlib
-- Google Colab
+- Seaborn
+
+---
+
+## 📈 Impacto de Negócio
+
+A implementação desse modelo permite:
+
+- Identificação antecipada de clientes com alto risco
+- Redução de churn
+- Aumento de Lifetime Value (LTV)
+- Melhoria da estratégia de retenção
+
 
